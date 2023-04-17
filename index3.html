@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <button id="toggle-mode">Light / Dark</button>
+    </header>
+
+    <main class="conteudo">
+        <h1>Tabuada</h1>
+        <hr>
+
+        <p>Digite um valor para gerar sua tabuada:</p>
+        <input type="text" name="text" id="numero">
+        <button onclick="tabuada()">Gerar Tabuada</button>
+        <table id="tabela-tabuada"></table>
+    </main>
+
+    <script>
+        function tabuada() {
+            var numero = parseInt(document.querySelector('input#numero').value);
+            var tabela = document.querySelector('#tabela-tabuada');
+
+            tabela.innerHTML = "";
+
+            for (var i = 1; i <= 10; i++) {
+                var resultado = numero * i;
+                var linha = "<tr><td>" + numero + " X " + i + " = " + resultado + "</tr></td>";
+
+                tabela.innerHTML += linha;
+            }
+
+            const toggleBtn = document.querySelector('#toggle-mode');
+            const body = document.body;
+            //const header = document.getElementById('toggle-mode);
+            const btn = document.querySelector('#toggle-mode')
+
+            toggleBtn.addEventListener("click", function () {
+                body.classList.toggle("dark-mode");
+                //header.classList.toggle("dark-mode-header");
+                toggleBtn.classList.toggle("btn-darkMode");     
+            });
+        }
+    </script>
+</body>
+
+</html>
