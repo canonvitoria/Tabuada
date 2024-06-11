@@ -12,12 +12,11 @@ body{
 }
 
 .conteudo {
-    background-color: aliceblue;
-    width: 400px;
+    width: 90vw;
     height: 400px;
-    border-radius: 8px;
-    margin: auto;
-    margin-top: 100px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    margin: 100px auto;
 }
 
 h1 {
