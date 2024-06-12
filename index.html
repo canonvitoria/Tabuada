@@ -21,8 +21,17 @@
         <hr>
 
         <p>Digite um valor para gerar sua tabuada:</p>
-        <input type="text" name="text" id="numero">
-        <button onclick="tabuada()">Gerar Tabuada</button>
+
+        <div class="container">
+            <label for="numero">Número</label>
+            <input type="text" name="text" id="numero">
+            <div class="botoes">
+                <button onclick="tabuada()" class="botao__gerar">Gerar Tabuada</button>
+                <button onclick="limpar()" class="botao__limpar">Limpar</button>
+            </div>
+        </div>
+
+
         <table id="tabela-tabuada"></table>
     </main>
 
@@ -39,8 +48,9 @@
 
                 tabela.innerHTML += linha;
             }
+        }
 
-            const toggleBtn = document.querySelector('#toggle-mode');
+        const toggleBtn = document.querySelector('#toggle-mode');
             const body = document.body;
             //const header = document.getElementById('toggle-mode);
             const btn = document.querySelector('#toggle-mode')
@@ -50,6 +60,11 @@
                 //header.classList.toggle("dark-mode-header");
                 toggleBtn.classList.toggle("btn-darkMode");     
             });
+
+        function limpar () {
+            var numero = document.getElementById('numero');
+
+            numero.value = ' ';
         }
     </script>
 </body>

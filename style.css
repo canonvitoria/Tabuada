@@ -13,14 +13,18 @@ body{
 
 .conteudo {
     width: 90vw;
-    height: 400px;
+    height: 600px;
     border-radius: 20px;
-    background-color: aliceblue;
+    background-color: white;
     margin: 100px auto;
 }
 
 h1 {
     text-align: center;
+    font-weight: lighter;
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-size: 25px;
 }
 
 hr {
@@ -35,30 +39,68 @@ p {
     font-size: 15px;
     text-align: center;
     padding: 10px;
+    margin:  20px;
     background-color: rgba(162, 228, 146, 0.267);
-    border-radius: 2px;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 80%;
+}
+
+label {
+    font-size: 12px;
+    color: #d1cccc;
+    margin-left: 2px;
 }
 
 input {
-    border: none;
-    background-color: rgba(115, 190, 96, 0.521);
-    border-radius: 5px;
-    margin: 50px;
-    margin-bottom: 20px;
+    border: 2px solid rgb(148, 210, 148);
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.botoes {
+    margin: auto;
 }
 
 button {
     border: none;
     background-color: rgba(165, 236, 145, 0.452);
     padding: 5px;
+    margin: 10px;
     border-radius: 5px;
 }
 
 button:hover {
     cursor: pointer;
     background-color: rgba(115, 190, 96, 0.521);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.295);
 }
+
+.botao__limpar {
+    background-color: rgb(235, 182, 182);
+}
+
+.botao__limpar:hover {
+    background-color: rgb(227, 168, 168);
+}
+
+table {
+   margin: auto;
+   padding-top: 30px;
+}
+
+td {
+    width: 40%;
+    padding: 5px;
+    background-color: rgba(222, 245, 222, 0.861);
+    border-radius: 10px;
+    text-align: center;
+}
+
 
 .dark-mode {
     background-color: #2e2e2e;
@@ -79,6 +121,3 @@ button#toggle-mode {
     background-color: #F2A71B;
 }
 
-table {
-    margin-left: 50px;
-}
