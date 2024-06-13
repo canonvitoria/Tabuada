@@ -12,8 +12,13 @@
 <body>
 
     <header>
-        <!--Adicionar icone de light e dark mode-->
-        <button id="toggle-mode">Light / Dark</button>
+        <div class="toggle-container">
+            <input type="checkbox" id="toggle-mode" class="toggle-checkbox">
+            <label for="toggle-mode" class="toggle-label">
+                <span class="toggle-inner"></span>
+                <span class="toggle-switch"></span>
+            </label>
+        </div>
     </header>
 
     <main class="conteudo">
@@ -51,15 +56,11 @@
         }
 
         const toggleBtn = document.querySelector('#toggle-mode');
-            const body = document.body;
-            //const header = document.getElementById('toggle-mode);
-            const btn = document.querySelector('#toggle-mode')
+        const body = document.body;
 
-            toggleBtn.addEventListener("click", function () {
-                body.classList.toggle("dark-mode");
-                //header.classList.toggle("dark-mode-header");
-                toggleBtn.classList.toggle("btn-darkMode");     
-            });
+        toggleBtn.addEventListener("change", function () {
+            body.classList.toggle("dark-mode");
+        });
 
         function limpar () {
             var numero = document.getElementById('numero');
